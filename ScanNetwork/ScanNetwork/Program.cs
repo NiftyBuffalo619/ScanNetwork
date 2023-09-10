@@ -14,7 +14,7 @@ namespace ScanNetwork
             var app = new CommandApp();
             app.Configure(config =>
             {
-                //config.AddCommand<ScanLocalNetworkCommand>("scanLocal");
+                config.AddCommand<ScanLocalNetworkCommand>("scanLocal");
                 config.AddCommand<netInterface>("netInterface");
             });
             return await app.RunAsync(args);
